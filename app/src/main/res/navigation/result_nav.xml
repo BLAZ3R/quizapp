@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/result_nav"
+    app:startDestination="@id/finish_fragment">
+
+    <fragment
+        android:id="@+id/finish_fragment"
+        android:name="com.quizapp.finish_fragment"
+        android:label="fragment_finish_fragment"
+        tools:layout="@layout/fragment_finish_fragment" >
+        <action
+            android:id="@+id/action_finish_fragment_to_resultActivity"
+            app:destination="@id/resultActivity" />
+        <action
+            android:id="@+id/action_finish_fragment_to_lostActivity"
+            app:destination="@id/lostActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/resultActivity"
+        android:name="com.quizapp.ResultActivity"
+        android:label="ResultActivity" />
+    <activity
+        android:id="@+id/lostActivity"
+        android:name="com.quizapp.LostActivity"
+        android:label="activity_lost"
+        tools:layout="@layout/activity_lost" />
+</navigation>
